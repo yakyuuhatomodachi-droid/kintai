@@ -185,6 +185,9 @@
   .toast { position: fixed; right: 16px; bottom: 16px; background: var(--text-primary); color: #fff; font-size: 13px; padding: 10px 14px; border-radius: 8px; z-index: 4000; opacity: 0; transform: translateY(8px); transition: opacity .2s, transform .2s; pointer-events: none; max-width: 80vw; }
   .toast.show { opacity: 0.94; transform: translateY(0); }
 
+  .float-top { position: fixed; left: 16px; bottom: 16px; z-index: 900; display: inline-flex; align-items: center; gap: 4px; padding: 10px 16px; border-radius: 999px; background: var(--accent); color: #fff; font-size: 14px; font-weight: 700; text-decoration: none; box-shadow: 0 3px 10px rgba(37,33,48,.25); }
+  .float-top:hover { background: #4A3B75; }
+  .float-top:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
   /* ===== 印刷 ===== */
   #print-area { display: none; }
   .rp { font-family: 'Zen Kaku Gothic New', 'Hiragino Sans', 'Yu Gothic', sans-serif; color: #222; background: #fff; transform-origin: top left; }
@@ -439,6 +442,7 @@
   </div>
 </div>
 
+<a class="float-top" href="https://yakyuuhatomodachi-droid.github.io/" aria-label="トップページへ戻る">⌂ トップへ</a>
 <div class="toast" id="toast"></div>
 <div class="chart-tip" id="chart-tip"></div>
 <div id="print-area"></div>
@@ -521,7 +525,7 @@
 <script>
 // ===== 設定 =====
 // Googleスプレッドシート側(GAS)のウェブアプリURLをここに貼り付けます
-const SHEET_API_URL = 'https://script.google.com/macros/s/AKfycbwXFCK57OFDZMXiOeaWrDy6o6H1uOxbQrcq-tVScrYIXsgBS4HUHSlgKCPww8fw3EU-vQ/exec';
+const SHEET_API_URL = '__YOUR_GAS_WEB_APP_URL__';
 
 // 同じGitHub Pagesのほかのアプリとブラウザ保存が混ざらないよう、専用の名前を使う
 const PASSWORD_STORAGE_KEY = 'kintai_pw';
